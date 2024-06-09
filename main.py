@@ -12,8 +12,8 @@ listener.bind((config.listenerIP,config.slotPort))
 listener.listen(0)
 
 while True:
-    connection, address = listener.accept()
     print("Is Ready")
+    connection, address = listener.accept()
     connection.send("Successfull".encode('utf8'))
     request = connection.recv(1024).decode('utf8')
     print(request)
