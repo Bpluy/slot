@@ -57,5 +57,6 @@ def decrypt_string(cipher_text):
     return plain_text.decode('utf-8')
 
 def SimulateGame():
+    print("Game is started")
     time.sleep(10)
     return(random.randint(config.minTokensPay,config.maxTokensPay))
