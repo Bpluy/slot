@@ -16,7 +16,7 @@ def InitSlot():
     con.connect((config.serverIP, config.serverPort))
     rd = con.recv(1024)
     print(rd.decode('utf8'))
-    message = encrypt_string(f"initSlot {config.slotID} 1 {config.slotPrice}")
+    message = encrypt_string(f"initSlot {config.slotID} 1 {config.slotPrice} {config.slotName}")
     con.send(message.encode('utf8'))
     rd = con.recv(1024).decode('utf8')
     while rd != "1":
